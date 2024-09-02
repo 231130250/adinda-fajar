@@ -13,7 +13,6 @@ body {
     min-height: 4000px;
 }
 
-/* Hero Section */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -58,22 +57,22 @@ body {
     color: white;
 }
 
-/* Navbar */
-.mynavbar {
-    background-color: var(--cream);
-}
+.mynavbar{
+    backdrop-filter: blur(4px);
 
+}
+.mynavbar .offcanvas{
+    height: 100vh;
+}
 .mynavbar .navbar-brand, .mynavbar .offcanvas-title {
     font-family: Courgette;
     font-size: 3rem;
     color: var(--gold);
 }
-
 .mynavbar .nav-link {
     text-transform: uppercase;
     font-family: Courgette;
     color: black;
-    margin-left: 5rem;
 }
 
 /* Home Section */
@@ -89,7 +88,6 @@ body {
     background-position: top left, bottom right;
     background-size: 95vh;
 }
-
 .home h2, .home p {
     color: #000;
     text-align: center;
@@ -100,7 +98,6 @@ body {
 .home h2 {
     font-family: 'Courgette';
 }
-
 /* Info Section */
 .info {
     background-color: var(--cream);
@@ -146,7 +143,6 @@ body {
     margin-top: 1.5rem;
     display: block;
 }
-
 /* Gallery Section */
 .Galeri {
     text-align: center;
@@ -260,10 +256,11 @@ body {
 footer {
     background-color: var(--bg); /* Background color set to black */
     color: var(--cream); /* Text color set to cream */
-    padding: 30px 0;
+    padding: 1rem 0;
     text-align: center;
-    border-top: 1px solid var(--gold); /* Top border set to gold */
-    min-height: 100px;
+    position: relative;
+    width: 100%;
+
 }
 
 footer p {
@@ -343,7 +340,7 @@ footer a:hover {
     }
 }
 
-/* Media Queries */
+
 
 /* Laptop */
 @media (max-width: 992px) {
@@ -355,7 +352,10 @@ footer a:hover {
         padding: 40px;
         margin-bottom: 1rem;
     }
-
+    .mynavbar .nav-link {
+        font-size: 2rem;
+        text-align: center;
+    }
     .home {
         display: flex;
         flex-direction: column;
@@ -379,6 +379,7 @@ footer a:hover {
         border-radius: 10px;
         z-index: 2;
     }
+
 }
 
 /* Tablet */
@@ -392,12 +393,6 @@ footer a:hover {
         margin: 5px;
         margin-bottom: 2rem;
     }
-
-    .mynavbar .nav-link {
-        font-size: 2rem;
-        text-align: center;
-    }
-
     .home {
         background-size: 74%;
         background-position: top left, bottom right;
@@ -431,7 +426,6 @@ footer a:hover {
     .hero h1 {
         font-size: 3.5rem;
     }
-
     .home {
         background-size: 130%;
         background-position: top left, bottom right;
@@ -448,7 +442,6 @@ footer a:hover {
     .image-display img {
         width: 12vh;
     }
-    
     .gift h2 {
         font-size: 2rem;
     }
